@@ -1,5 +1,6 @@
 const express = require( 'express' );
 const bodyParser = require( 'body-parser' );
+const {PORT} = require( './config' );
 
 const app = express();
 const jsonParser = bodyParser.json();
@@ -61,6 +62,6 @@ app.post( '/api/addStudent', jsonParser, ( request, response ) => {
 
 
 
-app.listen( 8080, () => {
+app.listen( PORT, () => {
     console.log( "This app is running in port 8080." );
 });
